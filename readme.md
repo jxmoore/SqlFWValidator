@@ -5,10 +5,10 @@ This is an Azure function that goes through all of the Azure SQL PAAS instances 
 
 The enviroment variables drive some of this :
 ```C#
-            slackMsg.channel = Environment.GetEnvironmentVariable("channel"); // The channel we are posting too 
-            string slackHook = Environment.GetEnvironmentVariable("hook"); // the web hook we will use to post the message
-            string ruleChange = Environment.GetEnvironmentVariable("UpdateRules"); // a bool, are we updating the rules or just reporting on them
-            string whiteList = Environment.GetEnvironmentVariable("WhiteList"); // any additional ranges we want to add without having to deploy code changes 
+    slackMsg.channel = Environment.GetEnvironmentVariable("channel"); // The channel we are posting too 
+    string slackHook = Environment.GetEnvironmentVariable("hook"); // the web hook we will use to post the message
+    string ruleChange = Environment.GetEnvironmentVariable("UpdateRules"); // a bool, are we updating the rules or just reporting on them
+    string whiteList = Environment.GetEnvironmentVariable("WhiteList"); // any additional ranges we want to add without having to deploy code changes 
 ```
 
 
