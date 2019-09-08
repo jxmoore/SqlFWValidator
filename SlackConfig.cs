@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 
+// These classes represent the JSON body of the POST that will be sent to slack. 
+
+
 namespace SQLIpRange
 {
     // Maps to the 'field' portion of the JSON body
