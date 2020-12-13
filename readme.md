@@ -8,7 +8,7 @@ At the end of the run a message with the details of the run are posted to the sp
 The enviroment variables drive some of this :
 ```C#
 slackMsg.channel = Environment.GetEnvironmentVariable("channel"); // The channel we are posting too 
-string slackHook = Environment.GetEnvironmentVariable("hook"); // the web hook we will use to post the message
+string slackHook = Environment.GetEnvironmentVariable("botToken"); // the bot token that will be used to post the message to slack.
 string ruleChange = Environment.GetEnvironmentVariable("UpdateRules"); // a bool, are we updating the rules or just reporting on them
 string whiteList = Environment.GetEnvironmentVariable("WhiteList"); // any additional ranges we want to add without having to deploy code changes 
 ```
