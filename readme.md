@@ -1,6 +1,6 @@
 ## Azure Sql PAAS FW Validator
 
-This is an Azure function that goes through all of the Azure SQL PAAS instances and audits the SQL FW rules. The `allowed` rules are within the main SqlValidator.CS and can be adjusted via enviroment variables (see below). It collects all offending rules that are found for reporting and if set to do so, can remove them automatically. Once an instance has been audited any rules in the `allowed` list that are missing from the PAAS instance will be added. 
+This is an Azure function that goes through all of the Azure SQL PAAS instances it has access to and audits the SQL FW rules. The `allowed` rules are within the main AuditorFunction.cs and can be adjusted via enviroment variables (see below). It collects all offending rules that are found for reporting and if set to do so, can remove them automatically. Once an instance has been audited any rules in the `allowed` list that are missing from the PAAS instance will be added. 
 
 At the end of the run a message with the details of the run are posted to the specified slack channel, most output is also captured in the standard STDOUT using the standard `TraceWriter`.
 
